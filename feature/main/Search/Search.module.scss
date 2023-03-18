@@ -1,0 +1,62 @@
+.Title {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 17px;
+}
+
+.Container {
+  padding: 0 18px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.Search {
+  display: flex;
+  width: 100%;
+  &__button {
+    padding-top: 4px;
+    border: none;
+    width: 40px;
+    background-color: var(--color-silver);
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.List {
+  &__title {
+    margin: 0 10px 10px 10px;
+  }
+  &_item {
+    padding: 10px 50px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-white-darken);
+    }
+
+    svg {
+      position: absolute;
+      left: 12px;
+      path {
+        fill: var(--color-default-darken);
+      }
+    }
+
+    &_shop {
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+
+      & > *:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+}

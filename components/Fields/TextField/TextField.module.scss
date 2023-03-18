@@ -1,0 +1,120 @@
+.TextField {
+  width: 100%;
+  font-family: 'Farfetch Basis';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  &__border {
+    border: none;
+  }
+  &__input {
+    background-color: var(--color-silver);
+    padding-left: 5px;
+    width: 100%;
+    border-radius: 0 8px 8px 0;
+    height: 38px;
+    &::placeholder {
+      color: var(--color-grey);
+      font-family: FarfetchBasis;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0em;
+    }
+    &[type='number'] {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      -moz-appearance: textfield;
+    }
+    &[type='range'] {
+      margin: 0;
+      padding: 0 3px;
+      border: none;
+      height: fit-content;
+      -webkit-appearance: none;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: var(--color-blue);
+        border-radius: 8px;
+      }
+      &::-webkit-slider-thumb {
+        height: 18px;
+        width: 18px;
+        border-radius: 18px;
+        background: var(--color-blue);
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+      }
+      &::-moz-range-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: var(--color-blue);
+        border-radius: 8px;
+      }
+      &::-moz-range-thumb {
+        height: 18px;
+        width: 18px;
+        border-radius: 18px;
+        background: var(--color-blue);
+        cursor: pointer;
+      }
+      &::-ms-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      &::-ms-fill-lower {
+        background: var(--color-blue);
+        border-radius: 8px;
+      }
+      &::-ms-fill-upper {
+        background: var(--color-blue);
+        border-radius: 8px;
+      }
+      &::-ms-thumb {
+        margin-top: 1px;
+        height: 18px;
+        width: 18px;
+        border-radius: 18px;
+        background: var(--color-blue);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// animation: shake 0.25s ease-in-out 0s 2;
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  25% {
+    margin-left: 0.1rem;
+    margin-right: -0.1rem;
+  }
+  75% {
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+  }
+  100% {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}

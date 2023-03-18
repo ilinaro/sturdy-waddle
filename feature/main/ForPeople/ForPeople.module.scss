@@ -1,0 +1,27 @@
+.ForPeople {
+  height: 64px;
+  display: flex;
+  margin: 0 18px;
+  display: flex;
+  align-items: center;
+  &__container {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    border-bottom: 1px solid var(--color-default);
+    align-items: center;
+    & > :nth-child(2) {
+      margin-left: 16px;
+    }
+  }
+}
+
+.Bottom {
+  margin-top: 6px;
+  height: 2px;
+  width: 69px;
+  background-color: var(--color-black);
+}
+.NoChoice {
+  margin-top: -10px;
+}

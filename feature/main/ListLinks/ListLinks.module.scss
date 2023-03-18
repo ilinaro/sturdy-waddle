@@ -1,0 +1,17 @@
+.ListList {
+  height: 44px;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  &__tilte {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.Line {
+  border: var(--color-default) solid 1px;
+  padding: 0 2px;
+}
