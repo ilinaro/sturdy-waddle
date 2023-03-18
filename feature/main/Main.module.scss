@@ -1,5 +1,7 @@
 .Page {
+  border: red solid;
   &__header {
+    border: blue solid;
     position: fixed;
     top: 0;
     width: 100%;
