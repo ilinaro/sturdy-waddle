@@ -5,6 +5,7 @@ import {
   useNoScroll,
   useUpScrollPage,
 } from '@/lib';
+import { useEffect, useState } from 'react';
 
 import { Footer } from '@/components/Footer';
 import Head from 'next/head';
@@ -27,6 +28,21 @@ export const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({
   const pageTitle = `m.ff | ${title}`;
 
   useNoScroll(noScroll);
+
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    // Вычисляем высоту видимой области браузера
+    const windowHeight = window.innerHeight;
+    // Вычитаем высоту верхней панели (если есть)
+    const topBarHeight = window.visualViewport?.offsetTop ?? 0;
+    // Вычитаем высоту нижней панели (если есть)
+    const bottomBarHeight =
+      windowHeight - document.documentElement.clientHeight;
+    // Устанавливаем высоту элемента
+    setHeight(windowHeight - topBarHeight - bottomBarHeight);
+  }, []);
+
   return (
     <>
       <Head>
@@ -36,8 +52,11 @@ export const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({
         <>
           {isMobile ? (
             <>
-              <main className={styles.MainMobile}>{children}</main>
-              <Footer />
+              <div style={{ height: `${height}px` }}>
+                <main className={styles.MainMobile}>{children}</main>
+                <Footer />
+              </div>
+              ;
             </>
           ) : null}
         </>
