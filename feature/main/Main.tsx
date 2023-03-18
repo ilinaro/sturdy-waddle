@@ -1,7 +1,8 @@
+import React, { useEffect, useState } from 'react';
+
 import { Counter } from './Counter';
 import { ForPeople } from './ForPeople';
 import { ListLinks } from './ListLinks';
-import React from 'react';
 import { Search } from './Search';
 import styles from './Main.module.scss';
 import { useAppSelector } from 'lib';
@@ -15,9 +16,11 @@ export const Main: React.FC<MainProps> = ({ NotFound }) => {
 
   return (
     <div className={styles.Page}>
-      <Counter />
-      <Search />
-      <ForPeople />
+      <div className={styles.Page__header}>
+        <Counter />
+        <Search />
+        <ForPeople />
+      </div>
       <div className={styles.List}>
         <ListLinks />
       </div>

@@ -1,11 +1,15 @@
 .Page {
-  height: 100%;
-  max-height: calc(100% - 84px);
+  height: 100vh;
+  &__header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-white);
+  }
 }
 
 .List {
   height: 100%;
-  max-height: calc(100% - 288px);
   overflow: hidden;
   overflow-y: scroll;
   &::-webkit-scrollbar {

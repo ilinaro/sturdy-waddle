@@ -2,6 +2,9 @@
   width: 100%;
   height: 84px;
   max-height: 84px;
+  position: fixed;
+  bottom: 0;
+  background-color:var(--color-white);
 }
 
 .FooterContainer {

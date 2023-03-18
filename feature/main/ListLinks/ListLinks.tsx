@@ -4,7 +4,7 @@ import styles from './ListLinks.module.scss';
 
 export const ListLinks = () => {
   return (
-    <>
+    <div className={styles.Wrapper}>
       {list.map((item) => (
         <div key={item.id} className={styles.ListList}>
           <div className={styles.ListList__tilte}>
@@ -14,7 +14,7 @@ export const ListLinks = () => {
           <div className={styles.Line}></div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
