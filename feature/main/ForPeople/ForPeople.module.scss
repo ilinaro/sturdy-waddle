@@ -1,9 +1,10 @@
 .ForPeople {
-  height: 64px;
+  height: 34px;
   display: flex;
   margin: 0 18px;
+  margin-top: 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   &__container {
     display: flex;
     height: fit-content;
