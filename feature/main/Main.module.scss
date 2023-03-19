@@ -2,20 +2,9 @@
   &__header {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     background-color: var(--color-white);
-  }
-}
-
-.List {
-  height: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-  & {
-    scrollbar-width: none;
   }
 }

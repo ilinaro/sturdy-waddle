@@ -6,6 +6,7 @@ import {
   useUpScrollPage,
 } from '@/lib';
 
+import { Desktop } from '@/feature';
 import { Footer } from '@/components/Footer';
 import Head from 'next/head';
 import styles from './PrimaryLayout.module.scss';
@@ -39,7 +40,11 @@ export const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({
               <main className={styles.MainMobile}>{children}</main>
               <Footer />
             </>
-          ) : null}
+          ) : (
+            <>
+              <Desktop />
+            </>
+          )}
         </>
       )}
     </>
