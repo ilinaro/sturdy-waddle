@@ -1,19 +1,18 @@
-import { BodyBold } from '@/components/Fonts/BodyBold';
-import { BodyNormal } from '@/components';
+import { ToggleSwitch } from '@/components';
 import styles from './ForPeople.module.scss';
+import { useState } from 'react';
 
 export const ForPeople = () => {
+  const [selectedOption, setSelectedOption] = useState(0);
+  const options = ['ДЛЯ НЕЕ', 'ДЛЯ НЕГО'];
   return (
     <div className={styles.ForPeople}>
       <div className={styles.ForPeople__container}>
-        <div>
-          <BodyBold>ДЛЯ НЕЕ</BodyBold>
-          <div className={styles.Bottom}></div>
-        </div>
-
-        <div className={styles.NoChoice}>
-          <BodyNormal>ДЛЯ НЕГО</BodyNormal>
-        </div>
+        <ToggleSwitch
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+        />
       </div>
     </div>
   );
